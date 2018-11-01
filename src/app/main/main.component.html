@@ -1,0 +1,39 @@
+<div class="jumbotron">
+  <div class="container">
+
+    <div class="col">
+        <div class="row">
+           <div class ="col-xs-3" bordre>
+              <img src="assets/images/image.jpg" class="img-thumbnail" alt="profile image"><hr>
+            </div>
+           <div class ="col-xs-3 color">
+              <p>
+
+              </p>
+           </div>
+        </div>
+        <div class="row">
+           <div class ="col-xs-3">
+              <div class="container">
+                  <div class="row">
+                    <label>Name: {{Person.firstName}}</label>
+
+                  </div>
+                  <div class="row">
+                    <label>Last Name: {{Person.lastName}}</label>
+
+                  </div>
+                  <div class="row">
+                    <label>Age: {{Person.age}}</label>
+
+                  </div>
+                </div>
+            </div>
+           <div class ="col-xs-3">
+                  <textarea name="Comment" id="" cols="30" rows="2"></textarea>
+                  <button class="btn-primary" (click)="postComment()">Post</button>
+           </div>
+        </div>
+
+  </div>
+</div>
