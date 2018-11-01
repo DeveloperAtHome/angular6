@@ -19,6 +19,7 @@ export class MainComponent implements OnInit {
       lastName: 'Antetokounmpo',
       age: '23'
     };*/
+    /*Object person*/
    }
 
   ngOnInit() {
