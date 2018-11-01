@@ -13,6 +13,8 @@ export class MainComponent implements OnInit {
     age: '23'
   };
 
+  public comment = '';
+  public showComments : boolean = false;
   constructor() {
   /*comment123*/
    }
@@ -21,7 +23,7 @@ export class MainComponent implements OnInit {
   }
 
   postComment() {
-
+    this.showComments = true;
   }
 
 }
