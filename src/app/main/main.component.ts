@@ -14,13 +14,7 @@ export class MainComponent implements OnInit {
   };
 
   constructor() {
-    /*this.Person = {
-      firstName: 'Giannis',
-      lastName: 'Antetokounmpo',
-      age: '23'
-    };*/
-    /*Object person !!!*/
-    
+
    }
 
   ngOnInit() {
