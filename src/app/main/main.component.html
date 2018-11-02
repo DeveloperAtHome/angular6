@@ -7,8 +7,8 @@
               <img src="assets/images/image.jpg" class="img-thumbnail" alt="profile image"><hr>
             </div>
            <div class ="col-xs-3 color" *ngIf="showComments">
-              <p>
-                  {{comment}}
+              <p *ngFor="let com of comments">
+                {{com}}
               </p>
            </div>
         </div>
@@ -16,22 +16,22 @@
            <div class ="col-xs-3">
               <div class="container">
                   <div class="row">
-                    <label>Name: {{Person.firstName}}</label>
+                    <label>Name: {{currentUser.firstName}}</label>
 
                   </div>
                   <div class="row">
-                    <label>Last Name: {{Person.lastName}}</label>
+                    <label>Last Name: {{currentUser.lastName}}</label>
 
                   </div>
                   <div class="row">
-                    <label>Age: {{Person.age}}</label>
+                    <label>Age: {{currentUser.age}}</label>
 
                   </div>
                 </div>
             </div>
            <div class ="col-xs-3">
-                  <textarea name="Comment" id="" cols="30" rows="2" [(ngModel)]="comment"></textarea>
-                  <button class="btn-primary" (click)="postComment()">Post</button>
+                  <textarea name="Comment" id="" cols="30" rows="2" [(ngModel)]="currentComment"></textarea>
+                  <button class="btn-primary" (click)="addComment()">Post</button>
            </div>
 
         </div>

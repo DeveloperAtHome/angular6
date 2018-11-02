@@ -1,3 +1,4 @@
+import { Person } from './../models/Person';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,22 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  public Person: object = {
-    firstName: 'Giannis',
-    lastName: 'Antetokounmpo',
-    age: '23'
-  };
-
-  public comment = '';
-  public showComments : boolean = false;
+  public currentUser: Person;
+  public comments: string[];
+  public showComments: boolean;
+  public currentComment: string;
   constructor() {
-  /*comment123*/
+
    }
 
   ngOnInit() {
+    this.currentUser = new Person('Nikola', 'Vujkovic', 24);
+    this.comments = [];
+    this.showComments = false;
+    this.currentComment = '';
   }
 
-  postComment() {
+  public addComment(): void {
+    this.comments.push(this.currentComment);
+    this.currentComment = '';
     this.showComments = true;
   }
 
